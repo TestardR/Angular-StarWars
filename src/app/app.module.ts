@@ -1,18 +1,18 @@
+import { LogService } from './services/log.service';
+import { StarWarsService } from './services/star-wars.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TabsComponent } from './components/tabs/tabs.component';
+import { ListComponent } from './components/list/list.component';
+import { ItemComponent } from './components/item/item.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  declarations: [AppComponent, TabsComponent, ListComponent, ItemComponent],
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [StarWarsService, LogService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
